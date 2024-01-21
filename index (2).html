@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Color Changer</title>
+   
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(giphy\ \(1\).gif);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+
+        }
+
+        div.container {
+            text-align: center;
+            background-image:url(images.jpg) ;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+        }
+
+        h1 {
+            color: #0f0f0f;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: #020202;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #color-box {
+            width: 200px;
+            height: 200px;
+            background-color: #2ecc71;
+            margin-top: 20px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        #color-box:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Color Changer</h1>
+        <button id="btn">Click Me</button>
+        <div id="color-box"></div>
+    </div>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let box = document.getElementById('color-box');
+
+        btn.addEventListener('click', changeColor);
+
+        function changeColor() {
+            if (box.style.backgroundColor === 'rgb(46, 204, 113)') {
+                box.style.backgroundColor = '#3498db';
+            } else {
+                box.style.backgroundColor = '#2ecc71'; 
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
